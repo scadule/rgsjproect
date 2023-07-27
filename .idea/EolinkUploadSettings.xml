@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.api.demo.settings.UploadSettings">
+    <option name="autoAddSlash" value="true" />
+    <option name="autoParamExample" value="true" />
+    <option name="camel" value="true" />
+    <option name="projectHashKey" value="MCAvEA9b0c9526af3c45ed81e652f4d233357b8d420e7b1" />
+    <option name="server" value="https://space-va00p5.w.eolink.com/api" />
+    <option name="spaceKey" value="spaceKey=space-va00p5" />
+    <option name="token" value="ukb1nfN744c1af5636512e9d1cf6d953a48da792678c632" />
+  </component>
+</project>

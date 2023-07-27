@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bc56785d-e542-4f36-ac0d-4e2b982f769c" name="更改" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Maven/apache-maven-3.9.3" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="C:\Maven\apache-maven-3.9.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2T963bFvjXOExnkjaQ07Iail4Y7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/java/vhr-master/vhr",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "configurable.group.tools",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\java\vhr-master\vhr\vhrserver\vhr-mapper\src\main\java\org\javaboy\vhr\mapper" />
+      <recent name="C:\java\vhr-master\vhr\vhrserver\vhr-service\src\main\java\org\javaboy\vhr\service" />
+      <recent name="C:\java\vhr-master\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\controller\emp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.VhrApplicationTests.getEmployeetrainByPage">
+    <configuration name="VhrApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vhr-web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.javaboy.vhr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.javaboy.vhr" />
+      <option name="MAIN_CLASS_NAME" value="org.javaboy.vhr.VhrApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VhrApplicationTests.getEmployeeecByPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vhr-web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.javaboy.vhr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.javaboy.vhr" />
+      <option name="MAIN_CLASS_NAME" value="org.javaboy.vhr.VhrApplicationTests" />
+      <option name="METHOD_NAME" value="getEmployeeecByPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VhrApplicationTests.getEmployeetrainByPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vhr-web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.javaboy.vhr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.javaboy.vhr" />
+      <option name="MAIN_CLASS_NAME" value="org.javaboy.vhr.VhrApplicationTests" />
+      <option name="METHOD_NAME" value="getEmployeetrainByPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MailserverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mailserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.javaboy.mailserver.MailserverApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.javaboy.mailserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VhrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="vhr-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.javaboy.vhr.VhrApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.javaboy.vhr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.VhrApplicationTests.getEmployeetrainByPage" />
+        <item itemvalue="JUnit.VhrApplicationTests.getEmployeeecByPage" />
+        <item itemvalue="JUnit.VhrApplicationTests" />
+        <item itemvalue="Spring Boot.VhrApplication" />
+        <item itemvalue="Spring Boot.MailserverApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="bc56785d-e542-4f36-ac0d-4e2b982f769c" name="更改" comment="" />
+      <created>1690442760229</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690442760229</updated>
+      <workItem from="1690442762894" duration="11006000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
