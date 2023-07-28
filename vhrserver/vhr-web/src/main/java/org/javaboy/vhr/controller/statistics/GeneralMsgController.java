@@ -20,9 +20,24 @@ public class GeneralMsgController {
     @Autowired
     GeneralMsgService generalMsgService;
 
-    @GetMapping("/")
+    @GetMapping("/department")
     public List<RespMsgBean> getDepartmentNumber() {
         return generalMsgService.getDepartmentNumber();
+    }
+
+    @GetMapping("/degree")
+    public List<RespMsgBean> gettiptopDegreeNumber() {
+        return generalMsgService.gettiptopDegreeNumber();
+    }
+
+    @GetMapping("/position")
+    public List<RespMsgBean> getPositionNumber() {
+        return generalMsgService.getPositionNumber();
+    }
+
+    @GetMapping("/nativeplace")
+    public List<RespMsgBean> getnativePlaceNumber() {
+        return generalMsgService.getnativePlaceNumber();
     }
 
 }

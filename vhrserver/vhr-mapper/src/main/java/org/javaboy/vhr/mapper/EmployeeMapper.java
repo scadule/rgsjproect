@@ -36,4 +36,10 @@ public interface EmployeeMapper {
 
     List<RespMsgBean> getDepartmentNumber();
 
+    List<RespMsgBean> gettiptopDegreeNumber();
+
+    List<RespMsgBean> getPositionNumber();
+
+    List<RespMsgBean> getnativePlaceNumber();
+
 }

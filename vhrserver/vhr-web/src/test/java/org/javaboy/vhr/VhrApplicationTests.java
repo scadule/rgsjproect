@@ -37,7 +37,7 @@ public class VhrApplicationTests {
 
 
     @Test
-    public void getEmployeetrainByPage() {
+    public void getEmployeetrainByPageTest() {
         Employeetrain empt = new Employeetrain();
         RespPageBean bean=employeetrainController.getEmployeetrainByPage(1,10,empt,null);
         List<Employeetrain> emptrain=(List<Employeetrain>)bean.getData();
@@ -48,7 +48,7 @@ public class VhrApplicationTests {
     }
 
     @Test
-    public void getEmployeeecByPage() {
+    public void getEmployeeecByPageTest() {
         Employeeec empec = new Employeeec();
         RespPageBean bean= employeeecController.getEmployeeecByPage(1, 10, empec, null);
         List<Employeeec> empecs=(List<Employeeec>)bean.getData();
@@ -58,12 +58,36 @@ public class VhrApplicationTests {
     }
 
     @Test
-    public void getDepartmentNumber() {
-
+    public void getDepartmentNumberTest() {
         List<RespMsgBean> msgBeans=generalMsgController.getDepartmentNumber();
         for (RespMsgBean msg:msgBeans) {
-            System.out.println(msg.getName()+" 部门人数为："+msg.getNumber());
+            System.out.println(msg.getName()+"    部门人数为："+msg.getNumber());
         }
     }
+
+    @Test
+    public void gettiptopDegreeNumberTest() {
+        List<RespMsgBean> msgBeans=generalMsgController.gettiptopDegreeNumber();
+        for (RespMsgBean msg:msgBeans) {
+            System.out.println(msg.getName()+"    学历人数为："+msg.getNumber());
+        }
+    }
+
+    @Test
+    public void getjobLevelNumberTest() {
+        List<RespMsgBean> msgBeans=generalMsgController.getPositionNumber();
+        for (RespMsgBean msg:msgBeans) {
+            System.out.println(msg.getName()+"    职位人数为："+msg.getNumber());
+        }
+    }
+
+    @Test
+    public void getnativePlaceNumberTest() {
+        List<RespMsgBean> msgBeans=generalMsgController.getnativePlaceNumber();
+        for (RespMsgBean msg:msgBeans) {
+            System.out.println(msg.getName()+"    省的人数为："+msg.getNumber());
+        }
+    }
+
 
 }
