@@ -57,21 +57,20 @@
     </select>
 
     <select id="getTotal" resultType="java.lang.Long">
-        select count(*) from employeeec ec
-        <where>
-            <if test="empec.employee != null">
-                AND e.name LIKE CONCAT('%', #{empec.employee.getName()}, '%')
-            </if>
-            <if test="empec.ectype !=null">
-                and ec.ecType =#{empec.ectype}
-            </if>
-            <if test="empec.ecpoint !=null">
-                and ec.ecPoint =#{empec.ecpoint}
-            </if>
-            <if test="beginDateScope !=null">
-                and ec.ecDate between #{beginDateScope[0]} and #{beginDateScope[1]}
-            </if>
-        </where>
+        select count(*) from employeeec ec,employee e
+        where e.id=ec.eid
+        <if test="empec.employee != null">
+            AND e.name LIKE CONCAT('%', #{empec.employee.getName()}, '%')
+        </if>
+        <if test="empec.ectype !=null">
+            and ec.ecType =#{empec.ectype}
+        </if>
+        <if test="empec.ecpoint !=null">
+            and ec.ecPoint =#{empec.ecpoint}
+        </if>
+        <if test="beginDateScope !=null">
+            and ec.ecDate between #{beginDateScope[0]} and #{beginDateScope[1]}
+        </if>
     </select>
 
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">

@@ -17,6 +17,12 @@ public class Employeeremove {
 
     private String remark;
 
+    private Employee employee;
+
+    private Department department;
+
+    private Position position;
+
     public Integer getId() {
         return id;
     }
@@ -71,5 +77,30 @@ public class Employeeremove {
 
     public void setRemark(String remark) {
         this.remark = remark == null ? null : remark.trim();
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
     }
 }

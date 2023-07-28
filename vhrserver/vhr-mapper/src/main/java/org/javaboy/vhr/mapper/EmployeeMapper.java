@@ -2,6 +2,7 @@ package org.javaboy.vhr.mapper;
 
 import org.apache.ibatis.annotations.Param;
 import org.javaboy.vhr.model.Employee;
+import org.javaboy.vhr.model.RespMsgBean;
 
 import java.util.Date;
 import java.util.List;
@@ -32,4 +33,7 @@ public interface EmployeeMapper {
     List<Employee> getEmployeeByPageWithSalary(@Param("page") Integer page, @Param("size") Integer size);
 
     Integer updateEmployeeSalaryById(@Param("eid") Integer eid, @Param("sid") Integer sid);
+
+    List<RespMsgBean> getDepartmentNumber();
+
 }

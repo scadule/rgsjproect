@@ -10,6 +10,12 @@
     <result column="reason" property="reason" jdbcType="VARCHAR" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
   </resultMap>
+  <resultMap id="AllAdjustSalaryInfo" type="org.javaboy.vhr.model.AdjustSalary" extends="BaseResultMap">
+    <association property="employee" javaType="org.javaboy.vhr.model.Employee">
+      <id column="eid" property="id"/>
+      <result column="ename" property="name"/>
+    </association>
+  </resultMap>
   <sql id="Base_Column_List" >
     id, eid, asDate, beforeSalary, afterSalary, reason, remark
   </sql>
@@ -19,6 +25,35 @@
     from adjustsalary
     where id = #{id,jdbcType=INTEGER}
   </select>
+
+  <select id="getAdjustSalaryByPage" resultMap="AllAdjustSalaryInfo">
+    select a.*,e.name ename
+    from adjustsalary a,employee e
+    where e.id=a.eid
+    <if test="empremove.employee != null">
+      AND e.name LIKE CONCAT('%', #{adjustsalary.employee.getName()}, '%')
+    </if>
+    <if test="beginDateScope !=null">
+      and a.asDate between #{beginDateScope[0]} and #{beginDateScope[1]}
+    </if>
+    <if test="page !=null and size!=null">
+      limit #{page},#{size}
+    </if>
+  </select>
+
+  <select id="getTotal" resultType="java.lang.Long">
+    select count(*) from adjustsalary a,employee e
+    where e.id=a.eid
+    <where>
+      <if test="empremove.employee != null">
+        AND e.name LIKE CONCAT('%', #{adjustsalary.employee.getName()}, '%')
+      </if>
+      <if test="beginDateScope !=null">
+        and a.asDate between #{beginDateScope[0]} and #{beginDateScope[1]}
+      </if>
+    </where>
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from adjustsalary
     where id = #{id,jdbcType=INTEGER}

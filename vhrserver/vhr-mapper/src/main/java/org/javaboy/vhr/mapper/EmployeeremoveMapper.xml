@@ -10,6 +10,20 @@
     <result column="reason" property="reason" jdbcType="VARCHAR" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
   </resultMap>
+  <resultMap id="AllEmployeeremoveInfo" type="org.javaboy.vhr.model.Employeeremove" extends="BaseResultMap">
+    <association property="employee" javaType="org.javaboy.vhr.model.Employee">
+      <id column="eid" property="id"/>
+      <result column="ename" property="name"/>
+    </association>
+    <association property="department" javaType="org.javaboy.vhr.model.Department">
+      <id column="afterdepid" property="id"/>
+      <result column="dname" property="name"/>
+    </association>
+    <association property="position" javaType="org.javaboy.vhr.model.Position">
+      <id column="afterjobid" property="id"/>
+      <result column="pname" property="name"/>
+    </association>
+  </resultMap>
   <sql id="Base_Column_List" >
     id, eid, afterDepId, afterJobId, removeDate, reason, remark
   </sql>
@@ -19,6 +33,47 @@
     from employeeremove
     where id = #{id,jdbcType=INTEGER}
   </select>
+
+  <select id="getAllEmployeeRemoveByPage" resultMap="AllEmployeeremoveInfo">
+    select er.*,e.name ename,er.eid eid,d.name dname,p.name pname
+    from employeeremove er,employee e,department d,position p
+    where e.id=er.eid and er.afterDepId=d.id and er.afterJobId=p.id
+    <if test="empremove.employee != null">
+      AND e.name LIKE CONCAT('%', #{empremove.employee.getName()}, '%')
+    </if>
+    <if test="empremove.department !=null">
+      and er.afterdepid =#{empremove.department.getId()}
+    </if>
+    <if test="empremove.position !=null">
+      and er.afterjobid =#{empremove.position.getId()}
+    </if>
+    <if test="beginDateScope !=null">
+      and er.removeDate between #{beginDateScope[0]} and #{beginDateScope[1]}
+    </if>
+    <if test="page !=null and size!=null">
+      limit #{page},#{size}
+    </if>
+  </select>
+
+  <select id="getTotal" resultType="java.lang.Long">
+    select count(*) from employeeremove er,employee e
+    where e.id=er.eid
+    <where>
+      <if test="empremove.employee != null">
+        AND e.name LIKE CONCAT('%', #{empremove.employee.getName()}, '%')
+      </if>
+      <if test="empremove.department !=null">
+        and er.afterdepid =#{empremove.department.getId()}
+      </if>
+      <if test="empremove.jobLevel !=null">
+        and er.afterjobid =#{empremove.jobLevel.getId()}
+      </if>
+      <if test="beginDateScope !=null">
+        and ec.ecDate between #{beginDateScope[0]} and #{beginDateScope[1]}
+      </if>
+    </where>
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from employeeremove
     where id = #{id,jdbcType=INTEGER}

@@ -20,6 +20,8 @@ public class AdjustSalary {
 
     private String remark;
 
+    private Employee employee;
+
     public Integer getId() {
         return id;
     }
@@ -74,5 +76,13 @@ public class AdjustSalary {
 
     public void setRemark(String remark) {
         this.remark = remark == null ? null : remark.trim();
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 }
