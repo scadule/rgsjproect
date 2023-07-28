@@ -47,7 +47,11 @@ public class GeneralMsgService {
                 i--;
             }
         }
+        return bean;
+    }
 
+    public List<RespMsgBean> getGenderNumber(){
+        List<RespMsgBean> bean = employeeMapper.getGenderNumber();
         return bean;
     }
 

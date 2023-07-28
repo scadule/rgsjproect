@@ -70,6 +70,10 @@
         <result column="nname" property="name" jdbcType="VARCHAR"/>
         <result column="number" property="number" jdbcType="INTEGER"/>
     </resultMap>
+    <resultMap id="GenderNumberResultMap" type="org.javaboy.vhr.model.RespMsgBean">
+        <result column="gname" property="name" jdbcType="VARCHAR"/>
+        <result column="number" property="number" jdbcType="INTEGER"/>
+    </resultMap>
 
     <sql id="Base_Column_List">
     id, name, gender, birthday, idCard, wedlock, nationId, nativePlace, politicId, email, 
@@ -213,6 +217,10 @@
         select left(nativePlace,2) nname,count(*) number
         from employee
         GROUP BY nname;
+    </select>
+    <select id="getGenderNumber" resultMap="GenderNumberResultMap">
+        select gender gname,count(*) number from employee
+        group by gender
     </select>
 
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">

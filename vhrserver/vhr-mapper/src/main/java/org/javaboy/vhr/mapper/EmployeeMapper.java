@@ -42,4 +42,6 @@ public interface EmployeeMapper {
 
     List<RespMsgBean> getnativePlaceNumber();
 
+    List<RespMsgBean> getGenderNumber();
+
 }

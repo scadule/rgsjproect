@@ -89,5 +89,13 @@ public class VhrApplicationTests {
         }
     }
 
+    @Test
+    public void getGenderNumberTest() {
+        List<RespMsgBean> msgBeans=generalMsgController.getGenderNumber();
+        for (RespMsgBean msg:msgBeans) {
+            System.out.println(msg.getName()+"    性人数为："+msg.getNumber());
+        }
+    }
+
 
 }

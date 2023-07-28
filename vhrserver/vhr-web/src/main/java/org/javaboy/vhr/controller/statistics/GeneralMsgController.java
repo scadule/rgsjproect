@@ -40,4 +40,9 @@ public class GeneralMsgController {
         return generalMsgService.getnativePlaceNumber();
     }
 
+    @GetMapping("/gender")
+    public List<RespMsgBean> getGenderNumber() {
+        return generalMsgService.getGenderNumber();
+    }
+
 }
